@@ -28,6 +28,9 @@ def shopping_cart():
                 cart[item] = [quantity, price]
                 show = 1
         elif user_in == "remove":
+            print("These are all the items in your cart currently")
+            for item in cart:
+                print(f"{cart[item][0]} {item}(s) -----> ${cart[item][1]}")
             item_r = input("Which item would you like to remove?:  ")
             if item_r in cart:
                 choice2 = input("Are you sure you want to remove this item? y/n:  ").lower()
